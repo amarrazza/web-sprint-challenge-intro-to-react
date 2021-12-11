@@ -1,20 +1,27 @@
 import React from 'react';
 import './App.css';
-import Character from './Character'
+import Character from './Character';
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+`
 
 const Characters = (props) => {
     const { characters } = props;
 
     return (
-        <div className='charactersWrapper'>
+        <StyledDiv>
             {
                 characters.map(char => {
-                    // console.log(char);
+                    console.log(char);
                     return <Character char = {char} />
                 })
             }
-            <p> Hello world</p>
-        </div>
+        </StyledDiv>
     );
 };
 
